@@ -7,7 +7,7 @@
     "example": "example"
   },
   "scripts": {
-    "prebuild": "npm i; cd example; npm i",
+    "prebuild": "npm install; cd example; npm install",
     "buildDev": "npm run prebuild; webpack; cd example; webpack;",
     "build": "npm run prebuild; webpack --mode=production; cd example; webpack --mode=production;",
     "lint": "./node_modules/.bin/eslint ./src/*",
