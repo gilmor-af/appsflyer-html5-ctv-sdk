@@ -6,7 +6,7 @@ async function main(){
     let response;
     let config = SAMSUNG_CONFIG;
     // config = LG_CONFIG;
-    // config = CUSTOM_CONFIG;
+    config = CUSTOM_CONFIG;
 
     try{
         appsflyer = await new AppsFlyerSDK(config);

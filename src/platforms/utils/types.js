@@ -3,6 +3,7 @@ export const Platform = {
     Webos: "webos",
     Smartcast: "smartcast", //vizio
     Vidaa: "vidaa",
+    NativePC: "smartcast"
 }
 
 export const DeviceIds = {

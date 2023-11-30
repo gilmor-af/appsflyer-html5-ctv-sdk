@@ -6,6 +6,7 @@ import Vidaa from './platforms/vidaa.js';
 import {INVALID_SDK, DEVICE_OS_NOT_SUPPORT, NO_PLATFORM_FOUND} from './core/utils/constants.js';
 import {Platform} from './platforms/utils/types.js';
 import semver from 'semver';
+import NativePC from './platforms/nativepc.js';
 
 const PLATFORM_MAPPING = [Samsung, LG, Vizio, Vidaa]
 
@@ -35,7 +36,9 @@ class AppsFlyerSDK {
         throw NO_PLATFORM_FOUND;
       }
     }catch(e){
-      throw DEVICE_OS_NOT_SUPPORT;
+      const platformFactory = NativePC;
+      this.platformInstance = new platformFactory();
+      // throw DEVICE_OS_NOT_SUPPORT;
     }
   }
 
